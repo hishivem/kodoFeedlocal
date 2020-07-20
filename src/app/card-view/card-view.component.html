@@ -1,0 +1,13 @@
+<div class="main">
+  <ul class="cards">
+    <li class="cards_item" *ngFor="let data of feedData">
+      <div class="card">
+        <div class="card_image"><img src="{{ data.image }}" /></div>
+        <div class="card_content">
+          <h2 class="card_title">{{ data.name }}</h2>
+          <p class="card_text">{{ data.description }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

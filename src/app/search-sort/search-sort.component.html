@@ -1,0 +1,62 @@
+<!-- feed-logo -->
+<section class="searchSort">
+  <div class="main">
+    <div class="row">
+      <div class="block">
+        <h1 class="text-l"><b>Feed</b></h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- feed-logo-ends -->
+<!-- searchandsortSection -->
+<section class="searchSort">
+  <div class="main">
+    <div class="row">
+      <div class="search">
+        <div class="block">
+          <input class="search_input" placeholder="Search" />
+        </div>
+      </div>
+      <div class="sort">
+        <div class="block">
+          <select name="cars" id="sort" class="fl-r" (change)="handleSorting($event.target.value)">
+            <option value="default">Default</option>
+            <option value="title">Title</option>
+            <option value="date">Date Created</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- searchandsortSection-ends -->
+<!-- cardViewSection -->
+<section class="cardView">
+  <app-card-view 
+  [feedData]="feedFilterData"
+  ></app-card-view>
+</section>
+<!-- cardViewSection-ends -->
+<!-- tableViewSections -->
+<section class="tableView">
+  <app-table-view
+  [feedData]="feedFilterData"></app-table-view
+    >
+</section>
+<!-- tableViewSections-ends -->
+<!-- pagination-starts -->
+<div class="paginationComponent row">
+  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+    <div class="float-right">
+      <app-pagination
+        [totalRecords]="feedData.length"
+        [recordsPerPage]="3"
+        (onPageChange)="displayActivePage($event)"
+      ></app-pagination>
+    </div>
+  </div>
+</div>
+<!-- pagination-ends -->
+
+<h3 class="made_by">Made with <span style="color: red;">♡</span></h3>

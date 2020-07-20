@@ -1,0 +1,74 @@
+/* laptop */
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .col-md-4{
+        display: inline-block;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+    .tableView{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mt-20{
+        margin-top: 20px;
+    }
+    .mb-20{
+        margin-bottom: 20px;
+    }
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .col-md-4{
+        display: inline-block;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+    .tableView{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mt-20{
+        margin-top: 20px;
+    }
+    .mb-20{
+        margin-bottom: 20px;
+    }
+    table{
+        border: 1px solid;
+    }
+    tr{
+        border: 1px solid;
+    }
+    th{
+        border: 1px solid;
+    }
+    td{
+        border: 1px solid;
+    }
+}
+/* laptop-ends */
